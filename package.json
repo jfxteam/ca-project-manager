@@ -1,0 +1,40 @@
+{
+  "author": {
+    "name": "Anton Lebedev @antoinedze"
+  },
+  "bugs": {
+    "url": "https://github.com/wf-team/ca-project-manager/issues"
+  },
+  "description": "Project Manager - ui for managing nodejs projects",
+  "homepage": "https://github.com/wf-team/ca-project-manager",
+  "license": "MIT",
+  "main": "index.js",
+  "name": "project-manager",
+  "type": "ca",
+  "scripts": {
+    "deploy": "npm i add-dependencies -g && npm i npm-check-updates -g && npm i nodemon -g && npm i",
+    "start": "ncu -u \"/^wf-.*$/\" && npm update && (set NODE_ENV=production) && \"node_modules/.bin/webpack\" --silent --watch | nodemon --watch ./dist index.js",
+    "dev": "ncu -u -n \"/^wf-.*$/\" && npm update && (set NODE_ENV=development) && \"node_modules/.bin/webpack\" --watch | nodemon --watch ./dist --inspect index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wf-team/ca-project-manager"
+  },
+  "dependencies": {
+    "@wf-team/react-form": "^0.0.1-1",
+    "@wf-team/react-navigator": "^0.0.1-1",
+    "@wf-team/react-repeater": "^0.0.1-0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "version": "0.0.0"
+}
