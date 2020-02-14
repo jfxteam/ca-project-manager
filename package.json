@@ -5,7 +5,7 @@
   "bugs": {
     "url": "https://github.com/wf-team/ca-project-manager/issues"
   },
-  "description": "Project Manager - ui for managing nodejs projects",
+  "description": "Project Manager - gui for managing nodejs projects",
   "homepage": "https://github.com/wf-team/ca-project-manager",
   "license": "MIT",
   "main": "index.js",
@@ -14,7 +14,9 @@
   "scripts": {
     "deploy": "npm i add-dependencies -g && npm i npm-check-updates -g && npm i nodemon -g && npm i",
     "start": "ncu -u \"/^wf-.*$/\" && npm update && (set NODE_ENV=production) && \"node_modules/.bin/webpack\" --silent --watch | nodemon --watch ./dist index.js",
-    "dev": "ncu -u -n \"/^wf-.*$/\" && npm update && (set NODE_ENV=development) && \"node_modules/.bin/webpack\" --watch | nodemon --watch ./dist --inspect index.js"
+    "dev": "ncu -u -n \"/^wf-.*$/\" && npm update && (set NODE_ENV=development) && \"node_modules/.bin/webpack\" --watch | nodemon --watch ./dist --inspect index.js",
+    "fix": "",
+    "build": ""
   },
   "repository": {
     "type": "git",
